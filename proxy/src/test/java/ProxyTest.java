@@ -20,9 +20,7 @@ public class ProxyTest {
         System.out.println(proxy.getClass());
 
         //指定具体需要代理的对象
-//        proxy.saleBook();
         proxy.saleFood();
-//        proxy.invocing();
 
     }
 }

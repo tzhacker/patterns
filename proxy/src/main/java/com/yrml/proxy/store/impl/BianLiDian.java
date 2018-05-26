@@ -11,4 +11,16 @@ public class BianLiDian {
         System.out.println("【商店】这是一瓶原生牛奶...");
     }
 
+    public String show1(){
+        return "1";
+    }
+
+    public String show2(){
+        return "2";
+    }
+
+    public String show3(){
+        return "3";
+    }
+
 }
