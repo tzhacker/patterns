@@ -1,4 +1,5 @@
 rootProject.name = 'patterns'
 include 'strategy'
 include 'proxy'
+include 'singleton'
 
