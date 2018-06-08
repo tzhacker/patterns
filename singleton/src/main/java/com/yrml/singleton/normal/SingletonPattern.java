@@ -4,7 +4,6 @@ package com.yrml.singleton.normal;
  * 懒汉在多线程场景下，线程非安全
  * @author created by John Tan on 2018/5/27
  */
-//@SuppressWarnings("all")
 public class SingletonPattern {
 
     private static SingletonPattern singletonPattern = null;
@@ -12,8 +11,7 @@ public class SingletonPattern {
     private SingletonPattern() {
     }
 
-    public static SingletonPattern getInstance(){
-        // if这里存在竞态条件
+    public static synchronized SingletonPattern getInstance(){
         if(singletonPattern == null){
             singletonPattern = new SingletonPattern();
         }
