@@ -3,4 +3,5 @@ include 'strategy'
 include 'proxy'
 include 'singleton'
 include 'multition'
+include 'factory-method'
 
