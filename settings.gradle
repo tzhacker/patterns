@@ -4,4 +4,5 @@ include 'proxy'
 include 'singleton'
 include 'multition'
 include 'factory-method'
+include 'abstract-factory'
 

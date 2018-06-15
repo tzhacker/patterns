@@ -1,10 +1,11 @@
 package com.yrml.factory.maker;
 
 import com.yrml.factory.container.HumanFactory;
+import com.yrml.factory.container.HumanFactoryLazy;
 import com.yrml.factory.service.Human;
-import com.yrml.factory.service.impl.BlackHuman;
-import com.yrml.factory.service.impl.WhiteHuman;
-import com.yrml.factory.service.impl.YellowHuman;
+import com.yrml.factory.service.yellow.impl.BlackHuman;
+import com.yrml.factory.service.yellow.impl.WhiteHuman;
+import com.yrml.factory.service.yellow.impl.YellowHuman;
 
 /**
  * @author created by John Tan on 2018/6/14
@@ -30,6 +31,7 @@ public class NvWa {
     yellowHuman.cry();
     yellowHuman.talk();
 
+
     System.out.println("\n\n---------random make human----------");
     for (int i = 0; i < 3; i++) {
 
@@ -39,5 +41,18 @@ public class NvWa {
       human.talk();
 
     }
+
+    System.out.println("\n\n --------------非延迟初始化---------------");
+    Human whiteHuman2 = HumanFactory.createHuman(WhiteHuman.class);
+    Human blackHuman2 = HumanFactory.createHuman(BlackHuman.class);
+    Human yellowHuman2 = HumanFactory.createHuman(YellowHuman.class);
+    System.out.println("whiteHuman:1[ " + whiteHuman + "  ]，2[ " + whiteHuman2 + " ]");
+    System.out.println("blackHuman:1[ " + blackHuman + "  ]，2[ " + blackHuman2+ " ]");
+    System.out.println("yellowHuman:1[ " + yellowHuman + "  ]，2[ " + yellowHuman2+ " ]");
+
+    System.out.println("\n\n --------------延迟初始化---------------");
+    Human whiteHumanLazy = HumanFactoryLazy.createHuman(WhiteHuman.class);
+    Human whiteHumanLazy2 = HumanFactoryLazy.createHuman(WhiteHuman.class);
+    System.out.println("whiteHumanLazy:1[ " + whiteHumanLazy + "  ]，2[ " + whiteHumanLazy2+ " ]");
   }
 }

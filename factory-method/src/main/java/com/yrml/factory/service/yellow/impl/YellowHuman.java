@@ -1,4 +1,4 @@
-package com.yrml.factory.service.impl;
+package com.yrml.factory.service.yellow.impl;
 
 import com.yrml.factory.service.Human;
 
