@@ -10,15 +10,13 @@ import com.yrml.facade.process.impl.LetterProcessImpl;
 public class ModenPostOffice {
 
   private LetterProcess letterProcess = new LetterProcessImpl();
-  Police police = new Police();
+  private Police police = new Police();
 
   public void sendLetter(String context, String address){
     letterProcess.writeVontext(context);
     letterProcess.fillEnvelope(address);
 
-    /**
-     * add the new step easily
-     */
+    //add the new step easily
     police.checkLetter(letterProcess);
 
 

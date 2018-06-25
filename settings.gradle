@@ -6,4 +6,5 @@ include 'multition'
 include 'factory-method'
 include 'abstract-factory'
 include 'facade'
+include 'adapter'
 
